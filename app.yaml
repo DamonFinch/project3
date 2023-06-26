@@ -1,0 +1,14 @@
+runtime: nodejs
+env: flex
+service: production-server
+
+handlers:
+  - url: /.*
+    secure: always
+    script: auto
+
+manual_scaling:
+  instances: 1
+
+network:
+  session_affinity: true
